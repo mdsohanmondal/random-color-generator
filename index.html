@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <div class="box-bar">
+            <div class="titele">
+                <h3>Display Color</h3>
+                <p title="Click to Change color" id="change-btn">Random Color</p>
+            </div>
+            <div class="display"></div>
+            <div class="copy-title-text">
+                <h3>Change & Copy Color</h3>
+                <p title="click to copy clipboard" class="copyCodeBtn" >Copy to clipboard</p>
+            </div>
+            <div class="select-mode">
+                <h4>Select Copy Mode</h4>
+                <div class="select-input selectRadioToCopy">
+                    <input 
+                    type="radio" 
+                    name="select-mode" 
+                    id="color-mode-hex"
+                    value="hex" 
+                    checked
+                    >
+                    <label>HEX</label>
+
+                    <input
+                     type="radio"
+                     name="select-mode" 
+                     id="color-mode-rgb"
+                     value="rgb"
+                     >
+                    <label>RGB</label>
+                </div>
+            </div>
+
+            <div class="output-color-code">
+                <div class="hex-bar">
+                    <h3>Hex</h3>
+                    <div class="hex-input">
+                        <button>#</button>
+                        <input type="text" id="hex-input" placeholder="8a2be2" maxlength="6">
+                    </div>
+                </div>
+
+                <div class="rgb-bar">
+                    <h3>Rgb</h3>
+                    <input type="#fff" id="rgb-input" disabled placeholder="rgb(138, 43, 226)">
+                </div>
+            </div>
+            <h3 class="adjust-h3">Adjust RGB Color</h3>
+            <div class="adjust-rgb-color-range">
+                <div class="red range-bar">
+                    <label for="red">
+                        <span>Red</span>
+                        <span id="redVal">225</span>
+                    </label>
+                    <input type="range" id="red" min="0" max="225" class="range-slide">
+                </div>
+                <div class="green range-bar">
+                    <label for="grenn">
+                        <span>Green</span>
+                        <span id="greenVal">225</span>
+                    </label>
+                    <input type="range" id="green" min="0" max="225" class="range-slide">
+                </div>
+                <div class="blue range-bar">
+                    <label for="blue">
+                        <span>Blue</span>
+                        <span id="blueVal">225</span>
+                    </label>
+                    <input type="range" id="blue" min="0" max="225" class="range-slide">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
